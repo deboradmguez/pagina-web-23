@@ -1,0 +1,147 @@
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar span {
+    color: white;
+    padding-left: 10px;
+}
+/* Cambia el color de los enlaces */
+#buyTicket {
+    color: #0edf07;
+}
+/* al hacer hover en los links */
+.nav-link:hover {
+    transform: translateY(-5px);
+    text-decoration: underline;
+}
+
+/* icono moviles */
+.navbar-toggler-icon  {
+    filter: invert(1);
+}
+
+
+/* conteiner carrusel */
+#slide1{
+    width:100%;
+    height:100vh;
+    background-image: url(ba1.jpg);
+    background-size:cover;
+    background-position: center center;
+    filter:brightness(0.6);
+    z-index:-1;
+}
+#slide2{
+    width:100%;
+    height:100vh;
+    background-image: url(ba2.jpg);
+    background-size:cover;
+    background-position: center center;
+    filter:brightness(0.6);
+    z-index:-1;
+}
+#slide3{
+    width:100%;
+    height:100vh;
+    background-image: url(ba3.jpg);
+    background-size:cover;
+    background-position: center center;
+    filter:brightness(0.6);
+    z-index:-1;
+}
+#carouselExampleIndicators{
+    position:absolute;
+    filter:brightness(0.5);
+    z-index:-1; 
+}
+/* #confer{
+    z-index:2;
+    position:relative;
+    top:200px;
+} */
+.container-confer {
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    margin-left:auto;
+
+}
+#confer {
+    margin-top: 150px;
+    font-size: 20px;
+    text-align:end;
+}
+
+#lugar {
+    font-size: 35px;
+}
+/* honolulu y texto */
+
+#div-honolulu {
+    background-color: #272626df;
+}
+
+/* formulario */
+#container-formulario {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* footer  */
+.foot-ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+    list-style:none;
+}
+.foot-link{
+    text-decoration:none;
+    font-size: 12px;
+    margin:25px
+}
+.foot-link:hover {
+    /* cambia el color del texto al pasar el mouse */
+    color: #e3ff0e !important;  
+    font-size: 15px;
+}
+footer {
+    background-image: linear-gradient(to bottom right, #081135, #0e5162); 
+    min-height: 80px;
+}
+#termyco, #pregfre{
+    max-width:90px;
+    display: flex; /* hace que las palabras no queden al lado de la otra  */
+}
+
+/* boton subir */
+.btn-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    border-radius: 80%;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-subir i {
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+@media (min-width: 768px) {
+    #btn-subir-arriba {
+    width: 80px;
+    height: 80px;
+    }
+}
