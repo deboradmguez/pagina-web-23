@@ -26,7 +26,7 @@
 #slide1{
     width: 100%;
     height:100vh;
-    background-image: url(ba1.webp);
+    /* background-image: url(ba1.webp); */
     background-size:cover;
     background-position: center center;
     filter:brightness(0.6);
@@ -35,7 +35,7 @@
 #slide2{
     width: 100%;
     height:100vh;
-    background-image: url(ba2.webp);
+    /* background-image: url(ba2.webp); */
     background-size:cover;
     background-position: center center;
     filter:brightness(0.6);
@@ -44,7 +44,7 @@
 #slide3{
     width: 100%;
     height:100vh;
-    background-image: url(ba3.webp);
+    /* background-image: url(ba3.webp); */
     background-size:cover;
     background-position: center center;
     filter:brightness(0.6);
@@ -69,6 +69,10 @@
 
 #lugar {
     font-size: 35px;
+}
+/* cards */
+.card img {
+    height: 361px;
 }
 /* honolulu y texto */
 
