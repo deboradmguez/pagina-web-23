@@ -71,9 +71,9 @@
     font-size: 35px;
 }
 /* cards */
-.card img {
-    height: 361px;
-}
+/* .card img {
+    /* height: 361px; */
+
 /* honolulu y texto */
 
 #div-honolulu {
@@ -100,11 +100,11 @@
     font-size: 12px;
     margin:25px
 }
-.foot-link:hover {
+.foot-item:hover {
     /* cambia el color del texto al pasar el mouse */
-    color: #e3ff0e !important;  
-    font-size: 15px;
-}
+    color: #e3ff0e !important; 
+    transform: translateY(-5px);
+    }
 footer {
     background-image: linear-gradient(to bottom right, #081135, #0e5162); 
     min-height: 80px;
