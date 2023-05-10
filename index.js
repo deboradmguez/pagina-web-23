@@ -9,8 +9,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-btnSubirArriba.addEventListener('click', (e) => {
-    e.preventDefault();
+btnSubirArriba.addEventListener('click', (clickEvent) => {
+    clickEvent.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
