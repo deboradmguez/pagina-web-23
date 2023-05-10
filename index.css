@@ -70,11 +70,9 @@
 #lugar {
     font-size: 35px;
 }
-/* cards */
-/* .card img {
-    /* height: 361px; */
-
-/* honolulu y texto */
+/* .card-img-top {
+    max-height: 280px;
+} */
 
 #div-honolulu {
     background-color: #272626df;
