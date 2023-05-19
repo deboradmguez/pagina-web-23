@@ -1,43 +1,11 @@
-body{
-    background-image:url(ba2.svg)
-}   
-.container {
-    max-width: 650px !important;
-}
-
-.main-container {
-    /* max-width: 650px; */
-    background-color: #f3eae8d8;
-    /* backdrop-filter: blur(40px); */
-    border:1px #dddddd80 solid;
-    box-shadow:1px 1px 10px #d4d4d4c5, -1px -1px 10px #d6d6d6b4;
-}
-/* #container-cards {
-    margin-top: 50px; 
+/* .container {
+    max-width: 750px !important;
 } */
-.venta-container{
-    user-select:none;
+#cartasRow {
+    align-items: space-between;
 }
-
-/* cada card  */
-
-#estudiante{
-    background-color:#d7f0fca8;
-    box-shadow:1px 0px 4px #a9e4ff, -1px 0px 4px #a9e4ff;
-}
-#trainee{
-    background-color:#e8e8ffb6;
-    box-shadow:1px 0px 4px #a9aaff, -1px 0px 4px #a9b6ff;
-    
-}
-#junior{
-    background-color:#feffd6ad;
-    box-shadow:1px 0px 4px #feffdf, -1px 0px 4px #feffa9;
-}
-#estudiante, #junior, #trainee {
-    border-radius: 2px;
-    cursor: pointer;
-    transition:.3s;
+#btnBorrar, #btnResumen {
+    background-color: #82CD47;
 }
 /* texto de venta */
 #text-venta {

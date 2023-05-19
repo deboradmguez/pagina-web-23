@@ -10,10 +10,10 @@
     <title>Comprar Tickets</title>
 </head>
 <body>
-    <header>
+    <header> 
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand align-items-start text-white" href="#"><img width="80" height="50" src="codoacodo.svg">Conf Bs As</a>
+                <a class="navbar-brand align-items-start text-white" href="#"><img width="80" height="50" src="codoacodo.svg" alt="logo">Conf Bs As</a>
                 <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,21 +39,21 @@
             </div>
         </nav>
     </header>
-    <main class="container main-container p-4 mb-3 mt-4">
-        <div class="card-container p-0">
-            <div class="row justify-content-center">
-                <div class="mb-1 col-xs-11 col-sm-4 col-md-4 col-lg-4 text-center">
-                    <div class="card h-100">
+    <main class="container mb-3 mt-4 mx-auto px-2">
+        <div class="card-container p-0 ">
+            <div id="cartasRow" class="row row-cols-1 row-cols-md-3">
+                <div class="card-group col-sm-4 p-1 text-center">
+                    <div class="card h-100 w-100">
                         <div id="estudiante" class="card-body border border-info">
                             <h5 class="card-title text-black fw-bold text-center">Estudiante</h5>
-                            <p class="card-text text-secondary text-center mb-2">Tienen un descuento</p>
+                            <p class="card-text text-mutedtext-center mb-2">Tienen un descuento</p>
                             <p class="card-text text-black text-center fw-bold">80%</p>
-                            <p class="card-subtitle text-muted text-center">* presentar documentación</p>
+                            <p class="card-subtitle text-secondary text-center">* presentar documentación</p>
                         </div>
                     </div>
                 </div>
-                <div class="mb-1 col-xs-11 col-sm-4 col-md-4 col-lg-4 text-center">
-                    <div class="card h-100">
+                <div class="col-sm-4 p-1 text-center">
+                    <div class="card h-100 w-100 ">
                         <div id="trainee" class="card-body border border-primary">
                             <h5 class="card-title text-black fw-bold text-center">Trainee</h5>
                             <p class="card-text text-secondary text-center mb-2">Tienen un descuento</p>
@@ -62,8 +62,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-1 col-xs-11 col-sm-4 col-md-4 col-lg-4 text-center">
-                    <div class="card h-100">
+                <div class="col-sm-4 p-1 text-center">
+                    <div class="card h-100 w-100">
                         <div id="junior" class="card-body border border-warning">
                             <h5 class="card-title text-black fw-bold text-center">Junior</h5>
                             <p class="card-text text-secondary text-center mb-2">Tienen un descuento</p>
@@ -76,60 +76,62 @@
         
         <!-- texto ventas -->
         <div class="venta-container container text-center">
-            <div class="texto-cartas container mt-3">
+            <div class="texto-cartas container">
                 <p id="text-venta" class="text-black text-center m-0">VENTA</p>
                 <p id="text-valor" class="text-center fw-bold m-0 mb-3">VALOR DE LOS TICKET $200</p>
             </div>
         </div>
         <!-- parte del formulario  -->
         <form>
-            <div id="container-form" class="row g-3">
+            <div id="container-form" class="row">
                 <div class="col-md-6 p-1">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
                 </div>
                 <div class="col-md-6 p-1">
-                    <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
                 </div>
         
                 <!-- Correo electrónico -->
                 <div class="col-12 p-1">
-                    <input type="email" class="form-control" id="correo" placeholder="Correo electrónico">
+                    <input type="email" class="form-control" id="correo" placeholder="Correo electrónico" required>
                 </div>
         
                 <!-- Cantidad y categoría -->
-                <div class="col-md-6 p-1 mt-1">
-                    <input type="text" id="inputCantidad" class="form-control" placeholder="Cantidad" required>
-                </div>
-                <div class="col-md-6 p-1 mt-1">
+                <label for="cantidad" class="col-md-6 p-1 mt-1">Cantidad
+                    <input type="number" min="1" max="12" value="1" id="inputCantidad" class="form-control" placeholder="Cantidad" required>
+                </label>
+                <label for="categoria" class="col-md-6 p-1 mt-1">Categoria
                     <select id="inputDescuento" class="form-select" required>
                         <option selected>Elige una categoría</option>
                         <option value="0.8">Estudiante</option>
                         <option value="0.5">Trainee</option>
                         <option value="0.15">Junior</option>
                     </select>
-                </div>
+                </label>
         
                 <!-- Total a pagar -->
                 <div class="col-12 p-1">
                     <div class="alert alert-primary p-2 mt-2 mb-2" role="alert">
-                        Total a Pagar: <span id="a-pagar"></span>
+                        Total a Pagar:$ <span id="a-pagar"></span>
                     </div>
                 </div>
         
                 <!-- Botones de enviar y resumen -->
                 <div class="col-md-6 p-1 mb-2">
-                    <button class="btn btn-success w-100" type="reset">Borrar</button>
+                    <button id="btnBorrar" class="btn text-white w-100" type="reset">Borrar</button>
                 </div>
                 <div class="col-md-6 p-1 mb-2">
-                    <button class="btn btn-secondary w-100" type="button" onclick="getValueFromInput()">Resumen</button>
+                    <button id="btnResumen" class="btn text-white w-100" type="button" onclick="getValueFromInput()">Resumen</button>
                 </div>
             </div>
+            <div id="mensajeValidacion" style="display: none; color: red;"></div>
+
         </form>
     </div>
     </main>
         
-    <footer class="footer row bottom-0 p-7 m-0">
-        <ul class="foot-ul m-0 p-0 justify-content-center">
+    <footer class="footer row m-0">
+        <ul class="foot-ul m-0 p-0 d-flex justify-content-center">
             <li class="foot-item d-inline">
                 <a id="pregfre" class="foot-link text-white active" aria-current="page" href="#">Preguntas Frecuentes</a>
             </li>
@@ -142,7 +144,7 @@
             <li class="foot-item d-inline">
                 <a class="foot-link text-white" href="#">Conferencias</a>
             </li>
-            <li class="fot-item d-inline">
+            <li class="foot-item d-inline">
                 <a id="termyco" class="foot-link text-white" href="#">Términos y Condiciones</a>
             </li>
             <li class="foot-item d-inline">

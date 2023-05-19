@@ -13,7 +13,6 @@
 /* al hacer hover en los links */
 .nav-link:hover {
     transform: translateY(-5px);
-    text-decoration: underline;
 }
 
 /* icono moviles */
@@ -96,8 +95,6 @@
     margin:25px
 }
 .foot-item:hover {
-    /* cambia el color del texto al pasar el mouse */
-    color: #e3ff0e !important; 
     transform: translateY(-5px);
     }
 footer {
@@ -107,34 +104,4 @@ footer {
 #termyco, #pregfre{
     max-width:90px;
     display: flex; /* hace que las palabras no queden al lado de la otra  */
-}
-
-/* boton subir */
-.btn-subir {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    border-radius: 80%;
-    width: 50px;
-    height: 50px;
-}
-
-.btn-subir i {
-    font-size: 24px;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
-
-@media (min-width: 768px) {
-    #btn-subir-arriba {
-    width: 80px;
-    height: 80px;
-    }
 }
